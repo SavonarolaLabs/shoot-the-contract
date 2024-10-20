@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "generate": "java -jar ./antlr-4.13.2-complete.jar -Dlanguage=JavaScript -o ./src/parser ./grammar/Sample.g4"
+    "generate": "cd grammar && java -jar ../antlr-4.13.2-complete.jar -Dlanguage=JavaScript -visitor -Xexact-output-dir -o ../src/parser RalphLexer.g4 && java -jar ../antlr-4.13.2-complete.jar -Dlanguage=JavaScript -visitor -Xexact-output-dir -lib ../src/parser -o ../src/parser RalphParser.g4 && cd .."
   },
   "devDependencies": {
     "vite": "^5.4.8"
