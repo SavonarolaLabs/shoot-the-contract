@@ -1,0 +1,18 @@
+{
+  "name": "shoot-the-contract",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate": "java -jar ./antlr-4.13.2-complete.jar -Dlanguage=JavaScript -o ./src/parser ./grammar/Sample.g4"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "antlr4": "^4.13.2"
+  }
+}
